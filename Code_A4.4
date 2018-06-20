@@ -1,0 +1,18 @@
+'''
+Problem Statement 1:
+A test is conducted which is consisting of 20 MCQs (multiple choices questions) with
+every MCQ having its four options out of which only one is correct. Determine the
+probability that a person undertaking that test has answered exactly 5 questions wrong.
+'''
+import math
+
+#Total number of trials
+n = 20
+#probability of right ans
+p_rightAns = 1/4
+#probability of wrong ans
+p_wrongAns = (1-1/4)
+#probability of exactly 5 out of 20 answers incorrect
+P = (math.factorial(20)/(math.factorial(5)*math.factorial(20-5))) * (p_wrongAns**5) * (p_rightAns**15)
+
+print("P(exactly 5 out of 20 answers incorrect) = {:.10f}".format(P))
